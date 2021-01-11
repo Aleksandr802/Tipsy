@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  Tipsy
 //
-//  Created by Angela Yu on 09/09/2019.
-//  Copyright © 2019 The App Brewery. All rights reserved.
+//  Created by Aleksandr Seminov on 09/01/2021.
+//  Copyright © 2021 com.Aleksandr-Sav. All rights reserved.
 //
 
 import UIKit
@@ -12,6 +12,8 @@ class CalculatorViewController: UIViewController {
    
     var tip = 0.10
     var numberOfPeople = 0
+    var billTotal = 0.0
+    var finalResult = "0.0"
     
     @IBOutlet weak var billTextField: UITextField!
     @IBOutlet weak var zeroPctButton: UIButton!
@@ -20,6 +22,8 @@ class CalculatorViewController: UIViewController {
     @IBOutlet weak var splitNumberLabel: UILabel!
     
     @IBAction func tipChanged(_ sender: UIButton) {
+        
+        billTextField.endEditing(true)
         
         zeroPctButton.isSelected = false
         tenPctButton.isSelected = false
@@ -36,16 +40,24 @@ class CalculatorViewController: UIViewController {
     }
     
     @IBAction func stepperValueChanger(_ sender: UIStepper) {
-        
+    
         splitNumberLabel.text = String(format: "%.0f", sender.value)
         numberOfPeople = Int(sender.value)
+        
     }
     
     @IBAction func calculatePressed(_ sender: UIButton) {
         
+        let bill = billTextField.text!
+        if bill != "" {
+            billTotal = Double(bill)!
+            let result = billTotal * (1 + tip) / Double(numberOfPeople)
+            finalResult = String(format: "%.2f", result)
+        }
+        
         print(String(format: "%.1f", tip))
         print(numberOfPeople)
-      
+        print(finalResult)
     }
     
 }

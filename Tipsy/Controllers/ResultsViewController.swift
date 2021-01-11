@@ -1,9 +1,9 @@
 //
-//  ResultsViewController.swift
+//  ViewController.swift
 //  Tipsy
 //
-//  Created by Aleksandr Seminov on 06.01.2021.
-//  Copyright © 2021 The App Brewery. All rights reserved.
+//  Created by Aleksandr Seminov on 09/01/2021.
+//  Copyright © 2021 com.Aleksandr-Sav. All rights reserved.
 //
 
 import UIKit

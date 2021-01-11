@@ -1,9 +1,9 @@
 //
-//  SceneDelegate.swift
+//  ViewController.swift
 //  Tipsy
 //
-//  Created by Angela Yu on 09/09/2019.
-//  Copyright © 2019 The App Brewery. All rights reserved.
+//  Created by Aleksandr Seminov on 09/01/2021.
+//  Copyright © 2021 com.Aleksandr-Sav. All rights reserved.
 //
 
 import UIKit
