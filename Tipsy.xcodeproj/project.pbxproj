@@ -106,7 +106,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1230;
-				ORGANIZATIONNAME = "The App Brewery";
+				ORGANIZATIONNAME = Aleksandr802;
 				TargetAttributes = {
 					ADB6894E2326708D006D4E2B = {
 						CreatedOnToolsVersion = 11.0;

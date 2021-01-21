@@ -32,13 +32,13 @@ class CalculatorViewController: UIViewController {
         
         let buttonTitle = sender.currentTitle!
         let buttonTitleMinusPercentSign = String(buttonTitle.dropLast())
-        let buttonTitleAsANumber = Double(buttonTitleMinusPercentSign)!
-        tip = buttonTitleAsANumber / 100
+        let buttonTitleAsANumber = Double(buttonTitleMinusPercentSign)
+        tip = (buttonTitleAsANumber ?? 0) / 100
         
     }
     
     @IBAction func stepperValueChanger(_ sender: UIStepper) {
-    
+        
         splitNumberLabel.text = String(format: "%.0f", sender.value)
         numberOfPeople = Int(sender.value)
         
@@ -48,7 +48,7 @@ class CalculatorViewController: UIViewController {
         
         let bill = billTextField.text!
         if bill != "" {
-            billTotal = Double(bill)!
+            billTotal = Double(bill) ?? 0.0
             let result = billTotal * (1 + tip) / Double(numberOfPeople)
             finalResult = String(format: "%.2f", result)
         }
